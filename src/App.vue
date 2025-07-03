@@ -11,6 +11,7 @@
       <HelloWorld msg="You did it!" />
 
       <nav>
+        <a-button type="primary">Primary Button</a-button>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
