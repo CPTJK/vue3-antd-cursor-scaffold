@@ -1,0 +1,33 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 创建新页面规则
+
+## 使用场景
+
+- 需要新建一个新的页面的时候（需要在 [index.ts](mdc:src/router/index.ts) 中添加一个路由的时候）
+
+## 关键规则
+
+- 根据提示， 在 /src/views/ 下面添加对应的文件夹
+- 创建 对应的.vue 文件, 文件中 template内容显示为 ${xxx} page 即可， 具体可以参考后面给到的示例
+- 在 [index.ts](mdc:src/router/index.ts) 中添加对应的路由配置， 使用 动态加载组件的方式
+
+## 示例
+
+<example>
+  <script lang="ts" setup>
+  import { useI18n } from 'vue-i18n'
+
+  const { tc } = useI18n()
+  </script>
+
+  <template>
+   <div>feedback page</div>
+  </template>
+
+  <style scoped></style>
+
+</example>

@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# 完善翻译文件规则
+
+## 使用场景
+
+- 帮我补全翻译内容/文件
+
+## 关键规则
+
+- 1.对照 [en.json](mdc:src/locales/en.json) 中的内容
+- 2.补全 [es.json](mdc:src/locales/es.json), [pt.json](mdc:src/locales/pt.json), [zh-CN.json](mdc:src/locales/zh-CN.json) 中的内容
+- 3.如果不存在 对应的 es 和 pt 文件, 需要帮我创建
+- 4.需要保持文件中的key的顺序跟 [en.json](mdc:src/locales/en.json)保持一致
+

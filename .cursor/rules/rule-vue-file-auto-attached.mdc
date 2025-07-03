@@ -1,0 +1,20 @@
+---
+description: 
+globs: *.vue
+alwaysApply: false
+---
+# vue文件规则
+
+## 使用场景
+- 需要创建或者修改.vue文件的时候
+
+## 关键规则
+- 使用ts语法
+- 使用vue3 setup模式
+- 使用vue3 Composition API
+- 使用vue3 v3.5+ 版本的api
+- 参考 [vite.config.ts](mdc:vite.config.ts) 中的plugin中的AutoImport和Components配置 ，避免多余的引入，保持代码的简介
+- 参考 [vueFileTemplate.vue](mdc:docs/vueFileTemplate.vue) 中的 顺序结构 来实现， 先 script 再 template 最后是 style。
+- 实现的时候，尽量复用现有组件， 可以在 src/components 中查找可用的组件
+## 示例
+暂无

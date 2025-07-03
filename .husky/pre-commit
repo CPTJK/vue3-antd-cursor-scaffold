@@ -1,0 +1,4 @@
+# .husky/pre-commit
+
+# 执行 lint-staged 配置的命令
+npx lint-staged
