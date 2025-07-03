@@ -1,14 +1,6 @@
 import { createI18n } from 'vue-i18n'
 import type { App } from 'vue'
 import type { I18n, Locale, I18nOptions, Composer } from 'vue-i18n'
-// 导入 Vant 的 Locale
-// import { Locale as VantLocale } from 'vant'
-
-// 导入 Vant 的语言包
-// import enUS from 'vant/es/locale/lang/en-US'
-// import zhCN from 'vant/es/locale/lang/zh-CN'
-// import esES from 'vant/es/locale/lang/es-ES'
-// import ptBR from 'vant/es/locale/lang/pt-BR'
 
 // 扩展 vue-i18n 的类型
 declare module 'vue-i18n' {
@@ -34,13 +26,7 @@ export const SUPPORT_LOCALES = ['en', 'es', 'pt']
 // 默认语言
 export const DEFAULT_LOCALE = 'en'
 
-// Vant UI 语言映射
-// const VANT_LOCALE_MAP: Record<string, Record<string, unknown>> = {
-//   'zh-CN': zhCN,
-//   en: enUS,
-//   es: esES,
-//   pt: ptBR,
-// }
+
 
 /**
  * 首字母大写
@@ -99,18 +85,6 @@ export function createI18nInstance() {
 // 全局i18n实例
 export const i18n = createI18nInstance()
 
-/**
- * 设置Vant UI的语言
- * @param locale 语言
- */
-// export function setVantLocale(locale: Locale): void {
-//   const vantLocale = VANT_LOCALE_MAP[locale]
-//   if (vantLocale) {
-//     VantLocale.use(locale, vantLocale)
-//   } else {
-//     console.warn(`[i18n] Vant UI 不支持语言: ${locale}，将使用默认语言`)
-//   }
-// }
 
 /**
  * 设置i18n语言
@@ -123,9 +97,6 @@ export function setI18nLanguage(instance: I18n, locale: Locale): void {
     instance.global.locale.value = locale
     document.querySelector('html')?.setAttribute('lang', locale)
     localStorage.setItem('locale', locale)
-
-    // 同步设置 Vant UI 的语言
-    // setVantLocale(locale)
   }
 }
 
