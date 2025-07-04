@@ -43,10 +43,19 @@ const handleLocaleChange = (value: SelectValue) => {
   }
 }
 
+const theme = computed(() => {
+  // 配置可参考文档 https://antdv.com/docs/vue/customize-theme-cn
+  return {
+    token: {
+      colorPrimary: '#00b96b',
+    },
+  }
+})
+
 </script>
 
 <template>
-  <a-config-provider :locale="map[locale as keyof typeof map]">
+  <a-config-provider :locale="map[locale as keyof typeof map]" :theme="theme">
     <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
