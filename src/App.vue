@@ -2,7 +2,7 @@
 import { Modal } from 'ant-design-vue'
 import type { SelectValue } from 'ant-design-vue/es/select'
 import { switchLanguage, i18n } from './i18n'
-
+import { theme } from 'ant-design-vue'
 // 根据 i18n 的 locale 切换 antd 的 locale
 import enUS from 'ant-design-vue/es/locale/en_US'
 import esES from 'ant-design-vue/es/locale/es_ES'
@@ -43,19 +43,20 @@ const handleLocaleChange = (value: SelectValue) => {
   }
 }
 
-const theme = computed(() => {
+const myTheme = computed(() => {
   // 配置可参考文档 https://antdv.com/docs/vue/customize-theme-cn
   return {
     token: {
       colorPrimary: '#00b96b',
     },
+    algorithm: theme.compactAlgorithm,
   }
 })
 
 </script>
 
 <template>
-  <a-config-provider :locale="map[locale as keyof typeof map]" :theme="theme">
+  <a-config-provider :locale="map[locale as keyof typeof map]" :theme="myTheme">
     <header>
       <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
