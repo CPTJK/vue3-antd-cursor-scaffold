@@ -25,7 +25,7 @@ export default defineConfigWithVueTs(
     files: ['**/*.{ts,mts,tsx,vue}'],
     rules: {
       'max-lines': [
-        'warn',
+        'error',
         {
           max: 300,
           skipBlankLines: true,
